@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+">
+<bean id="a1" class="Address" scope="prototype">  
+<constructor-arg value="Bangalore" name="city"></constructor-arg>  
+<constructor-arg value="KA" name="country"></constructor-arg>  
+<constructor-arg value="India" name="state"></constructor-arg>  
+</bean>  
+  
+<bean id="d1" class="Department">  
+<constructor-arg value="Finance"></constructor-arg>  
+<constructor-arg value="Abc person"></constructor-arg>  
+<constructor-arg value="4321"></constructor-arg>  
+<constructor-arg value="2641" type="int"></constructor-arg>  
+</bean>  
+
+<bean id="effort" class="EffortDetails">   
+<constructor-arg value="12"></constructor-arg>  
+<constructor-arg value="34" type="int"></constructor-arg>  
+</bean>  
+
+<bean id="local" class="Location">   
+<constructor-arg value="12"></constructor-arg>  
+<constructor-arg value="34" type="int"></constructor-arg>  
+</bean> 
+
+<bean id="e" class="Employee">  
+<constructor-arg value="12" type="int"></constructor-arg>  
+<constructor-arg value="kumar"></constructor-arg>  
+<constructor-arg>  
+<ref bean="a1"/>  
+</constructor-arg>  
+<constructor-arg>  
+<ref bean="d1"/>  
+</constructor-arg> 
+<constructor-arg>  
+<ref bean="effort"/>  
+</constructor-arg>
+<constructor-arg>  
+<ref bean="local"/>  
+</constructor-arg>  
+
+</bean>
+</beans>
